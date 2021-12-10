@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('MyApp rebuild');
     return ChangeNotifierProvider(
       create: (context) => ProviderDemo(), //initialize provider
       child: MaterialApp(
@@ -33,6 +34,7 @@ class page1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('page1 rebuild');
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [

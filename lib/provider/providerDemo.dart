@@ -7,4 +7,9 @@ class ProviderDemo with ChangeNotifier {
     message = 'Hello Flutter';
     notifyListeners();
   }
+
+  void updateValue(String newValue) {
+    message = newValue;
+    notifyListeners();
+  }
 }
