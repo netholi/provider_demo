@@ -13,7 +13,19 @@ class Page2 extends StatelessWidget {
       ),
       body: Container(
         child: Column(
-          children: [Text(Provider.of<ProviderDemo>(context).message)],
+          children: [
+            Text(Provider.of<ProviderDemo>(context).message),
+            SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Provider.of<ProviderDemo>(context, listen: false)
+                    .updateValue('Hello Provider');
+              },
+              child: Text('Update Value'),
+            )
+          ],
         ),
       ),
     );
