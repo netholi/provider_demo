@@ -38,8 +38,12 @@ class page1 extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(Provider.of<ProviderDemo>(context)
-            .message), //accessing provider value
+        Consumer(
+          builder: (BuildContext context, value, Widget? child) {
+            print('Consumer rebuild');
+            return Text(Provider.of<ProviderDemo>(context).message);
+          },
+        ), //accessing provider value
         const SizedBox(
           width: double.infinity,
         ),
