@@ -42,7 +42,9 @@ class page1 extends StatelessWidget {
           width: double.infinity,
         ),
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Provider.of<ProviderDemo>(context, listen: false).changeValue();
+          },
           child: const Text('Update'),
         ),
         SizedBox(
